@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<!--
+	Lens by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>HappyMedi</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	</head>
+	<body class="is-preload-0 is-preload-1 is-preload-2">
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="/">HappyMedi</a></h1>
+						<div id=test>
+						<!-- <form method="post" action="loginReq" id="loginFormID" name="loginForm" > -->
+						<% if(!confirm){ %>
+						<form method="post" id="loginFormID" name="loginForm" >
+							<input type="text" name="userID" placeholder="ID" autofocus >
+							<input type="password" name="userPaswrd" placeholder="Password">
+							<input type="submit" value="Login">
+							<input type="button" value="Join" onclick="location.href='join'" >
+						</form>
+						<%} else if(confirm){ %>
+							<h2><%= name %></h2>
+							<input type="button" value="my_info" onclick="location.href='my_info'" >
+							<input type='button' id="logOut_btn" value='LogOut' >
+						<% } %>
+						</div>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</header>
+
+				<!-- Thumbnail -->
+					<section id="thumbnails">
+						<article>
+							<a class="thumbnail" href="images/fulls/01.jpg" data-position="left center">
+								<img src="images/thumbs/01.jpg" onmouseover="this.src='images/thumbs/dark01.jpg'" onmouseout="this.src='images/thumbs/01.jpg'" alt="" />
+							</a>
+							<m>안녕하세요</m>
+							<h2>Medical+BlockChain</h2>
+							<p>HappyMedi 에 오신걸 환영합니다.</p>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" onmouseover="this.src='images/thumbs/dark02.jpg'" onmouseout="this.src='images/thumbs/02.jpg'" alt="" /></a>
+							<button class="patient_btn" onclick="window.open('/healthinfo_temp','','width=600,height=700,left=250,top=100')">조회</button>
+							
+							<p>누적된 여러분의 병력을 조회하세요.</p>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/03.jpg" data-position="top center"><img src="images/thumbs/03.jpg" onmouseover="this.src='images/thumbs/dark03.jpg'" onmouseout="this.src='images/thumbs/03.jpg'" alt="" /></a>
+							<h2>건강 정보 및 상식</h2>
+							<p>건강상식, 질병에 관한 정확한 정보를 제공합니다.</p>
+							<a href="healthSupport">건강 정보</a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/04.jpg"><img src="images/thumbs/04.jpg" onmouseover="this.src='images/thumbs/dark04.jpg'" onmouseout="this.src='images/thumbs/04.jpg'" alt="" /></a>
+							<h2><a href="map">회사위치</a></h2>
+							<p>서울특별시 강남구 역삼동 테헤란로 212</p>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/05.jpg" data-position="top center"><img src="images/thumbs/05.jpg" onmouseover="this.src='images/thumbs/dark05.jpg'" onmouseout="this.src='images/thumbs/05.jpg'" alt="" /></a>
+							<h2>고객센터</h2>
+							<p>언제든지 연락주십시오</p>
+						</article>
+						<% if (docadm===1){
+						%>
+						<article>
+							<a class="thumbnail" href="images/fulls/06.jpg"><img src="images/thumbs/06.jpg" onmouseover="this.src='images/thumbs/dark06.jpg'" onmouseout="this.src='images/thumbs/06.jpg'" alt="" /></a>
+							<h2><button onclick="window.open('/admin_temp','','width=600px,height=700,left=250,top=100')">관리자권한</button></h2>
+							<p>관리자만 볼수 있습니다.</p>
+						</article>
+						<%
+					} else { }
+						%>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="javascripts/my.js"></script>
+	</body>
+</html>

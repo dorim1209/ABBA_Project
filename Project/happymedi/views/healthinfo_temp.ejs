@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<!--
+	Lens by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html style="background: whitesmoke">
+
+<head>
+    <title>나의 진료이력 조회</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="javascripts/my.js"></script>
+    <style>
+        body {
+            background: rgb(214, 208, 208);
+            text-align: center;
+            margin: auto;
+            width: 80%;
+        }
+
+        #title {
+            font-size: 30px;
+            color: white;
+            background: rgb(128, 133, 175);
+            width: 100%;
+            height: 60px;
+            text-align: center;
+        }
+
+        #searchType {
+            background: rgb(129, 143, 189);
+            color: white;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+        }
+
+        #searchType_btn {
+            background: rgb(115, 133, 235);
+            color: white;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+        }
+
+        #patient_info {
+            text-align: center;
+
+
+        }
+
+        .div_inlineblock {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .div_parent {
+            display: table;
+            width: 100%;
+        }
+
+        div .div_table {
+            display: table;
+            width: 100%;
+            border: 1px;
+            border-color:burlywood;
+            border-style: groove;
+            margin-bottom: 10px;
+        }
+
+        .td_set {
+            border-color:cadetblue;
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .th_set {
+            border-style: solid;
+            border-width: 2px;
+            border-color: burlywood;
+            color: #1d300b;
+            text-align: center;
+        }
+        
+    </style>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/main.css" />
+
+</head>
+
+<body class="join_body">
+    <div id="title">진료기록 조회하기</div><br>
+
+    <div id="table_div">
+        환자전화번호를 입력하세요(ex:17113301)</br>
+        <div id="patient_info" class="div_parent">
+            <form method="POST" id="find_payinfo" name="find_payinfoForm">
+                <input name="find_tel" id="find_telID" size=70 placeholder="환자전화번호를 입력하세요" type="text" required /></br>
+                <input type="submit" id="searchType_btn" name="search_btname" value="조회"></input>
+            </form>
+            <br>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="copyright">
+                <li>&copy; Untitled.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a>.</li>
+            </ul>
+        </footer>
+
+    </div>
+    </div>
+</body>
+
+</html>

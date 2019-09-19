@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Happymedi: locaiton</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="javascripts/my.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script>
+        function init() {
+            window.navigator.geolocation.getCurrentPosition(current_position);
+        }
+
+        function current_position(position) {
+            var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+            var map_options = {
+                center: latlng, zoom: 14,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                mapTypeControl: false,
+                navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL }
+            }
+
+            var map = new google.maps.Map(document.getElementById("google_map"), map_options);
+
+            var marker = new google.maps.Marker({ position: latlng, map: map, title: "You are here!" });
+        }
+        window.addEventListener("load", init);
+    </script>
+    <style>
+        #b1 {
+            color: grey;
+            margin-left: 20px;
+            margin-top: 15px;
+            font-size: 40px;
+            font-family: Sans-serif;
+        }
+
+        #b2 {
+            margin-left: 20px;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+
+        #bus {
+            margin-left: 18px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body class="join_body">
+    <div id="b1">회사위치</div><br />
+    <hr>
+    <input action="action" style="float:left;" type="button" value="Back" onclick="history.go(-1);" /><br />
+    우리회사본사: 논현로 123길 개나리 공원
+    <div id="google_map" style="width:1100px;height:450px;margin-left:30px;margin-top:30px;"></div>
+    <hr>
+    <div id="b2">인근 지하철 논현역, 학동역</div>
+    <div id="bus">버스 : 150, 273, 151</div>
+
+</body>
+<footer>
+
+</footer>
+
+</html>
