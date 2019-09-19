@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<!--
+	Visualize by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+	<title>여행을 포스팅하다 Postrip</title>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="javascripts/kdr_find.js"></script>
+	<script src=""></script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/logout.css" />
+</head>
+
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<section id="main">
+
+			<div>
+				<form class="find_form">
+					<div style="margin-left: 25%; margin-right: 25%">
+					<%
+					if (id_login) {
+					%>
+					<p style="font-size: 20pt;"><%= id %></p>
+					<button id="find_close_btn" type="button">Close</button>
+					<%
+					} else if (pw_login) {
+					%>
+					<p style="font-size: 20pt;"><%= pw %></p>
+					<button id="find_close_btn" type="button">Close</button>
+					<%
+					} else {
+					%>
+						<p style="font-size: 20pt;">Find</p>
+						<p style="font-size: 14pt;">ID 찾기</p>
+						<input id="find_id_email" type="text" placeholder="E-mail" />
+						<input id="find_id_name" type="text" placeholder="Name" />
+
+						<p style="font-size: 14pt;">PW 찾기</p>
+						<input id="find_pw_email" type="text" placeholder="E-mail" />
+						<input id="find_pw_id" type="text" placeholder="ID" />
+
+						<div class="login_div" style="text-align: center">
+							<button id="find_find_btn" type="button">Find ID/PW</button>
+						</div>
+						<% } %>
+					</div>
+				</form>
+			</div>
+
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo
+				Images:
+				<a href="http://unsplash.com">Unsplash</a>.</p>
+		</footer>
+
+	</div>
+</body>
+
+</html>

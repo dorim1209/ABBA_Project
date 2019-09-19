@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<!--
+	Visualize by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+	<title>여행을 포스팅하다 Postrip</title>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/index.js"></script>
+	<script src="javascripts/kdr.js"></script>
+	<script src="javascripts/kdr_mypage.js"></script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/mypage.css" />
+</head>
+
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<div class="menu">
+			<a href="/">HOME</a>
+
+			<ul class="toolbar">
+				<%
+					if(loginState) {
+					%>
+				<%= name %>
+				<li id="logout_li"><a>Logout</a></li>
+				<%
+					} else {
+					%>
+				<li><a id="login_li" href="login">Login</a></li>
+				<li><a id="join_li" href="join">Join</a></li>
+				<%
+					}
+					%>
+				<li><a id="mypage_li" href="mypage2">MyPage</a></li>
+				<li id="fag_li">FAQ</li>
+			</ul>
+		</div>
+
+		<!-- Header -->
+		<header id="header">
+			<span class="avatar"><img src="<%= image %>" alt="" /></span>
+
+		</header>
+
+		<!-- Main -->
+		<section id="main">
+
+			<!-- Thumbnails -->
+			<div class="container">
+
+				<a href="mypage_edit"><button id="mypage_edit">개인정보수정하기</button></a>
+				<a href="mypage_upload"><button id="mypage_upload">파일업로드하기</button></a>
+
+				<div class="gallery">
+
+					<%
+					for(let i=DB.length-1; i >= 0; i--) {
+					%>
+					<div class="gallery-item" tabindex="0">
+						<img src="/mypage/<%= DB[i].db_image %>" class="gallery-image" alt="">
+						<div class="gallery-item-info"></div>
+					</div>
+					<%
+					}
+					%>
+
+				</div>
+				<!-- End of gallery -->
+
+			</div>
+			<!-- End of container -->
+
+
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images:
+				<a href="http://unsplash.com">Unsplash</a>.</p>
+		</footer>
+
+	</div>
+
+</body>
+
+</html>

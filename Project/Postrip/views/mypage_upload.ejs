@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>여행을 포스팅하다 Postrip</title>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="javascripts/kdr.js"></script>
+	<script src="javascripts/kdr_posting.js"></script>
+	<script src=""></script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/join.css" />
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<div class="menu">
+			<a href="/">HOME</a>
+			<ul class="toolbar">
+				<ul class="toolbar">
+					<ul class="toolbar">
+						<%= name %>
+						<li id="logout_li"><a>Logout</a></li>
+						<li><a id="mypage_li" href="mypage2">MyPage</a></li>
+						<li id="fag_li">FAQ</li>
+					</ul>
+				</ul>
+		</div>
+
+		<!-- Header -->
+		<!-- Header -->
+		<header id="header">
+			<span class="avatar"><img src="<%= image %>" alt="" /></span>
+
+		</header>
+
+		<!-- Main -->
+		<div class="gallery-item" tabindex="0">
+			<span class="gallery-image"><img id="file_select_image" src="" alt="" /></span>
+		</div>
+
+
+		<form method="POST" id="post_form" action="post_db" enctype="multipart/form-data">
+			<div class="mypage_post_div" style="text-align: center">
+				<label for="mypage_file_select" id="mypage_file_select_label">File Select</label>
+				<input id="mypage_file_select" type="file" name="post_img" />
+				<input id="mypage_post" type="submit" value="Post" />
+			</div>
+		</form>
+
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo
+				Images:
+				<a href="http://unsplash.com">Unsplash</a>.</p>
+		</footer>
+
+	</div>
+</body>
+
+</html>

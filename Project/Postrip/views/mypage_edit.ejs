@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<!--
+	Visualize by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+	<title>여행을 포스팅하다 Postrip</title>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="javascripts/kdr_edit.js"></script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/join.css" />
+</head>
+
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<div class="menu">
+			<a href="/">HOME</a>
+			<ul class="toolbar">
+				<ul class="toolbar">
+					<%= name %>
+					<li id="logout_li"><a>Logout</a></li>
+					<li><a id="mypage_li" href="mypage2">MyPage</a></li>
+					<li id="fag_li">FAQ</li>
+				</ul>
+			</ul>
+		</div>
+
+		<!-- Header -->
+		<header id="header">
+			<span class="avatar"><img id="profile_image" src="<%= image %>" alt="" /></span>
+		</header>
+
+		<!-- Main -->
+		<section id="main">
+
+			<div>
+				<form method="POST" id="edit_form" action="edit_db" enctype="multipart/form-data">
+					<p style="font-size: 20pt;">Edit</p>
+					<p style="font-size: 14pt;">Profile Image</p>
+					<label for="save_profile" id="upload_label">upload</label>
+					<input id="save_profile" type="file" name="img" />
+					<p style="font-size: 14pt;">E-mail</p>
+					<input name="edit_email" type="email" value="<%= email %>" />
+					<p style="font-size: 14pt;">Name</p>
+					<input name="edit_name" type="text" value="<%= name %>" />
+					<p style="font-size: 14pt;">ID</p>
+					<input name="edit_id" type="text" value="<%= id %>" />
+					<p style="font-size: 14pt;">Password</p>
+					<input name="edit_pw" type="text" value="<%= pw %>" />
+					<p style="font-size: 14pt;">생년월일</p>
+					<input name="edit_birth" type="text" value="<%= birth %>" />
+
+					<div class="edit_position">
+						<input id="edit_btn" type="submit" value="Edit" />
+					</div>
+
+				</form>
+				
+				<button id="delete_btn" type="button">Delete</button>
+
+			</div>
+
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo
+				Images:
+				<a href="http://unsplash.com">Unsplash</a>.</p>
+		</footer>
+
+	</div>
+</body>
+
+</html>
